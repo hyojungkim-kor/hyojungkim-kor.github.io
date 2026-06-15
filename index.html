@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyo-Jung Kim, PhD — Neuroscience · Neuro-otology · Neuro-ophthalmology · Clinical Laboratory Science</title>
+<meta name="description" content="Hyo-Jung Kim, PhD — Research Professor in vestibular neuroscience. Dizziness, vertigo, nystagmus, and vestibular diagnostics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0608;
+    --bg2:#140a10;
+    --panel:rgba(255,255,255,0.04);
+    --panel-border:rgba(255,255,255,0.09);
+    --text:#f3eaef;
+    --muted:#b89fad;
+    --faint:#8a6f7e;
+    --accent:#ff2d78;
+    --accent2:#ff7eb3;
+    --accent3:#c026d3;
+    --grad:linear-gradient(120deg,#ff2d78 0%,#ff4f9a 40%,#c026d3 100%);
+    --grad-soft:linear-gradient(120deg,rgba(255,45,120,.20),rgba(192,38,211,.12));
+    --radius:18px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter','Noto Sans KR',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body.lang-kr{font-family:'Noto Sans KR','Inter',sans-serif}
+  .bg-orbs{position:fixed;inset:0;z-index:-2;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+  .orb.a{width:520px;height:520px;background:#ff2d78;top:-160px;left:-120px;opacity:.42}
+  .orb.b{width:460px;height:460px;background:#c026d3;top:30%;right:-160px;opacity:.34}
+  .orb.c{width:420px;height:420px;background:#9d174d;bottom:-180px;left:30%;opacity:.3}
+  .grid-bg{position:fixed;inset:0;z-index:-1;
+    background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+    background-size:60px 60px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 40%,transparent 100%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 40%,transparent 100%);
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:rgba(7,9,18,.6);border-bottom:1px solid var(--panel-border)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;letter-spacing:.5px;display:flex;align-items:center;gap:10px}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);box-shadow:0 0 14px #ff2d78}
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;padding:7px 12px;border-radius:10px;transition:.2s}
+  .nav-links a:hover{color:var(--text);background:var(--panel)}
+  .lang-toggle{display:flex;border:1px solid var(--panel-border);border-radius:999px;overflow:hidden;margin-left:6px}
+  .lang-toggle button{background:transparent;border:none;color:var(--muted);font-size:12.5px;font-weight:600;padding:7px 13px;cursor:pointer;transition:.2s;font-family:inherit}
+  .lang-toggle button.active{background:var(--grad);color:#fff}
+  .nav-toggle{display:none;background:transparent;border:1px solid var(--panel-border);border-radius:10px;color:var(--text);padding:8px 10px;cursor:pointer;font-size:16px}
+
+  header{padding:90px 0 70px;position:relative}
+  .hero{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);
+    background:var(--grad-soft);border:1px solid var(--panel-border);padding:6px 14px;border-radius:999px;margin-bottom:22px}
+  .eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 0 rgba(255,126,179,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,126,179,.5)}70%{box-shadow:0 0 0 9px rgba(255,126,179,0)}100%{box-shadow:0 0 0 0 rgba(255,126,179,0)}}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,6.5vw,72px);line-height:1.02;font-weight:700;letter-spacing:-1.5px;margin-bottom:8px}
+  h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .kr-name{font-size:18px;color:var(--faint);font-weight:500;margin-bottom:20px;letter-spacing:.04em}
+  .roles{list-style:none;margin:24px 0 30px}
+  .roles li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px;margin-bottom:9px}
+  .roles li svg{flex-shrink:0;margin-top:4px;color:var(--accent)}
+  .roles li b{color:var(--text);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:14px;font-weight:600;padding:12px 20px;border-radius:12px;transition:.25s;cursor:pointer;border:none;font-family:inherit}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 30px -8px rgba(255,45,120,.6)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px -8px rgba(255,45,120,.7)}
+  .btn-ghost{background:var(--panel);color:var(--text);border:1px solid var(--panel-border)}
+  .btn-ghost:hover{border-color:var(--accent);background:rgba(255,45,120,.1)}
+  .avatar{width:210px;height:210px;border-radius:50%;display:grid;place-items:center;position:relative;flex-shrink:0}
+  .avatar .ring{position:absolute;inset:0;border-radius:50%;padding:3px;background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 12s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .avatar .inner{width:188px;height:188px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a141f,#120a10);display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;font-size:58px;font-weight:700;letter-spacing:1px;overflow:hidden}
+  .avatar .inner img{width:100%;height:100%;object-fit:cover;display:block}
+  .avatar .inner span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+  .metric{background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);padding:22px 20px;text-align:center;transition:.25s}
+  .metric:hover{transform:translateY(-3px);border-color:rgba(255,45,120,.4)}
+  .metric .num{font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .metric .lbl{font-size:12.5px;color:var(--muted);margin-top:4px;letter-spacing:.02em}
+
+  section{padding:70px 0;position:relative}
+  .section-head{margin-bottom:40px}
+  .section-tag{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:10px}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.5px;line-height:1.1}
+  .lead{color:var(--muted);font-size:16.5px;max-width:760px;margin-top:16px}
+
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
+  .panel{background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);padding:28px}
+  .panel h3{font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:14px;font-weight:600}
+  .about-grid p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+  .about-grid p b{color:var(--text)}
+  .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+  .tag{font-size:13px;font-weight:500;padding:7px 13px;border-radius:999px;background:var(--grad-soft);border:1px solid var(--panel-border);color:#cdd5ee}
+
+  .pub-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:26px}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .filter-btn{background:var(--panel);border:1px solid var(--panel-border);color:var(--muted);font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.2s;font-family:inherit}
+  .filter-btn.active{background:var(--grad);color:#fff;border-color:transparent}
+  .search-box{position:relative;flex:1;min-width:220px;max-width:320px}
+  .search-box input{width:100%;background:var(--panel);border:1px solid var(--panel-border);border-radius:12px;padding:11px 14px 11px 40px;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:.2s}
+  .search-box input:focus{border-color:var(--accent)}
+  .search-box svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--faint)}
+  .year-group{margin-bottom:30px}
+  .year-label{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--faint);margin-bottom:14px;display:flex;align-items:center;gap:14px}
+  .year-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--panel-border),transparent)}
+  .pub{background:var(--panel);border:1px solid var(--panel-border);border-radius:14px;padding:18px 20px;margin-bottom:12px;transition:.22s;display:flex;gap:16px;align-items:flex-start}
+  .pub:hover{transform:translateX(4px);border-color:rgba(255,45,120,.45);background:rgba(255,45,120,.05)}
+  .pub-idx{font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--faint);min-width:26px;padding-top:2px}
+  .pub-main{flex:1;min-width:0}
+  .pub-title{font-size:15.5px;font-weight:600;color:var(--text);margin-bottom:6px;line-height:1.4}
+  .pub-authors{font-size:13.5px;color:var(--muted);margin-bottom:9px}
+  .pub-authors .me{color:var(--accent2);font-weight:700}
+  .pub-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .badge{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:6px;letter-spacing:.02em}
+  .badge.journal{background:rgba(255,45,120,.15);color:#ffb3d1;border:1px solid rgba(255,45,120,.25)}
+  .badge.role{background:rgba(255,126,179,.14);color:#ffc0d6;border:1px solid rgba(255,126,179,.28)}
+  .badge.role.corr{background:rgba(255,193,90,.13);color:#ffd28a;border:1px solid rgba(255,193,90,.3)}
+  .badge.role.co{background:rgba(192,38,211,.14);color:#e7a6f0;border:1px solid rgba(192,38,211,.3)}
+  .doi-link{font-size:12.5px;color:var(--faint);text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:.2s;margin-left:auto}
+  .doi-link:hover{color:var(--accent2)}
+  .no-results{text-align:center;color:var(--faint);padding:40px;display:none}
+  .pub-kw{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+  .pub-kw span{font-size:11px;font-weight:500;color:#ffb3d1;background:rgba(255,126,179,.08);border:1px solid rgba(255,126,179,.2);padding:2px 9px;border-radius:999px;letter-spacing:.01em}
+
+  .ip-card{display:flex;gap:18px;align-items:flex-start}
+  .ip-icon{width:48px;height:48px;border-radius:12px;background:var(--grad-soft);border:1px solid var(--panel-border);display:grid;place-items:center;color:var(--accent2);flex-shrink:0}
+  .ip-note{font-size:13.5px;color:var(--faint);margin-top:14px;padding-top:14px;border-top:1px dashed var(--panel-border)}
+  .patent{display:flex;gap:15px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--panel-border)}
+  .patent:first-of-type{border-top:none}
+    .patent .ip-icon{width:42px;height:42px}
+  .patent-title{font-size:15px;font-weight:600;color:var(--text);line-height:1.45;margin-bottom:6px;transition:.2s}
+  .patent-meta{font-size:12.5px;color:var(--faint);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .patent-badge{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;background:rgba(255,193,90,.13);color:#ffd28a;border:1px solid rgba(255,193,90,.3)}
+  .patent-badge.filed{background:rgba(255,126,179,.1);color:#ffb3d1;border-color:rgba(255,126,179,.22)}
+  .patent-link{color:var(--accent2);font-weight:600;text-decoration:none}
+  .patent-link:hover{text-decoration:underline}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .contact-card{background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);padding:18px 15px;text-decoration:none;display:block;transition:.25s}
+  .contact-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(255,45,120,.06)}
+  .contact-card .ic{color:var(--accent2);margin-bottom:12px}
+  .contact-card .ct{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .contact-card .cv{font-size:13px;color:var(--text);font-weight:600;word-break:break-word}
+
+  footer{border-top:1px solid var(--panel-border);padding:34px 0;text-align:center;color:var(--faint);font-size:13.5px}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  [data-kr]{display:none}
+  body.lang-kr [data-en]{display:none}
+  body.lang-kr [data-kr]{display:inline}
+  body.lang-kr .roles li [data-kr]{display:inline}
+
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;gap:30px}
+    .avatar{order:-1;width:150px;height:150px}
+    .avatar .inner{width:130px;height:130px;font-size:42px}
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    .about-grid{grid-template-columns:1fr}
+    .nav-links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:rgba(10,13,26,.97);padding:14px;border-bottom:1px solid var(--panel-border)}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:11px}
+    .nav-toggle{display:block}
+    .contact-grid{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+<div class="bg-orbs"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand"><span class="dot"></span> Hyo-Jung Kim<span style="color:var(--faint);font-weight:400">, PhD</span></div>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#about"><span data-en>About</span><span data-kr>소개</span></a>
+      <a href="#research"><span data-en>Research</span><span data-kr>연구</span></a>
+      <a href="#publications"><span data-en>Publications</span><span data-kr>연구업적</span></a>
+      <a href="#patents"><span data-en>Patents</span><span data-kr>특허</span></a>
+      <a href="#contact"><span data-en>Contact</span><span data-kr>연락처</span></a>
+      <div class="lang-toggle">
+        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+        <button id="btn-kr" onclick="setLang('kr')">한글</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow"><span class="pulse"></span><span data-en>Neuroscience · Neuro-otology · Neuro-ophthalmology · Clinical Laboratory Science</span><span data-kr>신경과학 · 신경이과학 · 신경안과학 · 임상검사의학</span></span>
+        <h1><span data-en>Hyo-Jung<br><span class="grad">Kim</span>, PhD</span><span data-kr>김<span class="grad">효정</span></span></h1>
+        <div class="kr-name"><span data-en>김효정</span><span data-kr>Hyo-Jung Kim, PhD</span></div>
+        <ul class="roles">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+            <span>
+              <span data-en><b>Research Professor</b>, Clinical Research Institute, Seoul National University Bundang Hospital</span>
+              <span data-kr><b>연구중점교수</b>, 분당서울대학교병원 의생명연구원</span>
+            </span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            <span>
+              <span data-en><b>President &amp; CEO</b>, DZMED, Inc. (DZMED Korea)</span>
+              <span data-kr><b>대표이사</b>, (주)디지메드코리아 · President, DZMED, Inc.</span>
+            </span>
+          </li>
+        </ul>
+        <p class="lead" style="margin-bottom:26px">
+          <span data-en>Clinician-scientist studying the mechanisms, diagnosis, and treatment of dizziness and vertigo — from large-scale clinical epidemiology to vestibular animal models.</span>
+          <span data-kr>어지럼·현훈의 기전, 진단, 치료를 연구하는 임상과학자. 대규모 임상 역학 연구부터 전정 동물 모델까지 폭넓게 다룹니다.</span>
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#publications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span data-en>View Publications</span><span data-kr>연구업적 보기</span>
+          </a>
+          <a class="btn btn-ghost" href="mailto:hyojungkim.kor@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            <span data-en>Get in touch</span><span data-kr>연락하기</span>
+          </a>
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="ring"></div>
+        <div class="inner">
+          <img src="profile.png" alt="Hyo-Jung Kim" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span style="display:none">HJK</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric reveal"><div class="num">23</div><div class="lbl"><span data-en>First / Corresponding</span><span data-kr>주저자·교신저자</span></div></div>
+      <div class="metric reveal"><div class="num">178</div><div class="lbl"><span data-en>Total Publications</span><span data-kr>총 논문 수</span></div></div>
+      <div class="metric reveal"><div class="num">5,761</div><div class="lbl"><span data-en>Total Citations</span><span data-kr>총 인용수</span></div></div>
+      <div class="metric reveal"><div class="num">41</div><div class="lbl"><span data-en>h-index (Scholar)</span><span data-kr>h-지수 (Scholar)</span></div></div>
+      <div class="metric reveal"><div class="num">99</div><div class="lbl"><span data-en>i10-index</span><span data-kr>i10-지수</span></div></div>
+      <div class="metric reveal"><div class="num">2007–26</div><div class="lbl"><span data-en>Active Years</span><span data-kr>연구 기간</span></div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><span data-en>About</span><span data-kr>소개</span></div>
+      <h2><span data-en>Bridging the clinic, the bench, and the bedside</span><span data-kr>임상과 기초, 그리고 환자를 잇다</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="panel reveal">
+        <h3><span data-en>Profile</span><span data-kr>약력</span></h3>
+        <p>
+          <span data-en>Dr. Hyo-Jung Kim is a research professor at the Clinical Research Institute of Seoul National University Bundang Hospital and the founder and CEO of DZMED, Inc., a company developing diagnostic technologies for dizziness.</span>
+          <span data-kr>김효정 박사는 분당서울대학교병원 의생명연구원 연구중점교수이자, 어지럼증 진단기술을 개발하는 (주)디지메드코리아(DZMED, Inc.)의 창업자 겸 대표이사입니다.</span>
+        </p>
+        <p>
+          <span data-en>Her research integrates <b>clinical neurotology, oculomotor and otolithic physiology, and translational animal models</b>. In close collaboration with Prof. <a href="https://snu.elsevierpure.com/en/persons/ji-soo-kim" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Ji-Soo Kim</a>'s dizziness research group and The Korean Society for Ocular Motility, she investigates the mechanisms, diagnosis, and treatment of dizziness.</span>
+          <span data-kr>그녀의 연구는 <b>임상 신경이과학, 안구운동·이석 생리, 그리고 중개적 동물 모델</b>을 아우릅니다. <a href="https://snu.elsevierpure.com/en/persons/ji-soo-kim" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">김지수</a> 교수 어지럼증 연구그룹 및 대한안구운동연구회와 긴밀히 협업하며, 어지럼증의 발생 기전, 진단 기술, 치료 방법 개발 등의 연구를 이어오고 있습니다.</span>
+        </p>
+      </div>
+      <div class="panel reveal">
+        <h3><span data-en>Education &amp; Roles</span><span data-kr>학력 및 역할</span></h3>
+        <p style="font-size:14.5px"><b>PhD</b><span data-en>, Neuroscience</span><span data-kr>, 신경과학</span></p>
+        <p style="font-size:14.5px"><b><span data-en>Research Professor</span><span data-kr>연구중점교수</span></b><br><span style="color:var(--faint);font-size:13.5px"><span data-en>Seoul National University Bundang Hospital</span><span data-kr>분당서울대학교병원 의생명연구원</span></span></p>
+        <p style="font-size:14.5px"><b><span data-en>Founder &amp; CEO</span><span data-kr>창업자 · 대표이사</span></b><br><span style="color:var(--faint);font-size:13.5px">DZMED, Inc. · (주)디지메드코리아</span></p>
+        <p style="font-size:14.5px;margin-bottom:0"><b><span data-en>Frequent collaborators</span><span data-kr>주요 공동연구자</span></b><br><span style="color:var(--faint);font-size:13.5px">Ji-Soo Kim · Jeong-Yoon Choi · Sun-Uk Lee · Kwang-Dong Choi · Seong-Hae Jeong · Eunjin Kwon · Xu Yang · Xia Ling</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><span data-en>Research Focus</span><span data-kr>연구 분야</span></div>
+      <h2><span data-en>What I study</span><span data-kr>주요 연구 주제</span></h2>
+      <p class="lead"><span data-en>Core themes across clinical, physiological, and translational work.</span><span data-kr>임상·생리·중개연구를 관통하는 핵심 주제들.</span></p>
+    </div>
+    <div class="tags reveal">
+      <span class="tag">Vertigo</span>
+      <span class="tag">Dizziness</span>
+      <span class="tag">Nystagmus</span>
+      <span class="tag">Oculomotor</span>
+      <span class="tag">Saccades</span>
+      <span class="tag">Eye Movements</span>
+      <span class="tag">VOR</span>
+      <span class="tag">Head-impulse Test</span>
+      <span class="tag">VEMP</span>
+      <span class="tag">Otolithic Function</span>
+      <span class="tag">BPPV</span>
+      <span class="tag">Central Vestibular Disorders</span>
+      <span class="tag">Brainstem &amp; Cerebellar Stroke</span>
+      <span class="tag">Cerebellar Ataxia</span>
+      <span class="tag">Episodic Ataxia</span>
+      <span class="tag">Channelopathy</span>
+      <span class="tag">Ménière's Disease</span>
+      <span class="tag">Vestibular Migraine</span>
+      <span class="tag">Ototoxicity</span>
+      <span class="tag">Bilateral Vestibulopathy</span>
+      <span class="tag">Animal Models</span>
+      <span class="tag">AI</span>
+      <span class="tag">Questionnaire</span>
+      <span class="tag">Self-Treatment</span>
+      <span class="tag">Self-Diagnosis</span>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><span data-en>Publications</span><span data-kr>연구업적</span></div>
+      <h2><span data-en>First-author &amp; corresponding-author papers</span><span data-kr>주저자·교신저자 논문</span></h2>
+      <p class="lead"><span data-en>23 papers where Dr. Kim is the first or corresponding author. The full publication list, including co-authored work, is available on <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>.</span><span data-kr>김효정 박사가 제1저자 또는 교신저자로 참여한 23편입니다. 공저자 논문을 포함한 전체 목록은 <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>에서 확인하실 수 있습니다.</span></p>
+    </div>
+
+    <div class="reveal" style="margin:6px 0 22px">
+      <a class="btn btn-ghost" href="Hyo-Jung-Kim-Publications.xlsx" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
+        <span data-en>Download full publication list (178, Excel)</span><span data-kr>전체 논문 목록 다운로드 (178편, Excel)</span>
+      </a>
+    </div>
+    <div class="pub-controls reveal">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all"><span data-en>All</span><span data-kr>전체</span></button>
+        <button class="filter-btn" data-filter="first"><span data-en>First author</span><span data-kr>주저자</span></button>
+        <button class="filter-btn" data-filter="corr"><span data-en>Corresponding</span><span data-kr>교신저자</span></button>
+      </div>
+      <div class="search-box">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="pubSearch" placeholder="Search title or keyword…">
+      </div>
+    </div>
+
+    <div id="pubList"></div>
+    <div class="no-results" id="noResults"><span data-en>No publications match your search.</span><span data-kr>검색 결과가 없습니다.</span></div>
+  </div>
+</section>
+
+<section id="patents">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><span data-en>Intellectual Property</span><span data-kr>지식재산</span></div>
+      <h2><span data-en>Patents &amp; Technology</span><span data-kr>특허 및 기술</span></h2>
+    </div>
+    <div class="panel reveal">
+      <div class="patent">
+        <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+        <div class="patent-body">
+          <div class="patent-title"><span data-en>Device, method, and computer program for self-diagnosis and treatment of benign paroxysmal positional vertigo</span><span data-kr>양성돌발체위현훈의 웹 기반 자가 진단/치료 장치 및 방법</span></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-1947036 (2019.02.01)</span><a class="patent-link" href="https://doi.org/10.8080/1020170055316" target="_blank" rel="noopener">원문 →</a><span>·</span><span>US 11,594,332 B2 (2023.02.28)</span><a class="patent-link" href="https://patents.google.com/patent/US11594332B2/en" target="_blank" rel="noopener">원문 →</a></div>
+        </div>
+      </div>
+      <div class="patent">
+        <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+        <div class="patent-body">
+          <div class="patent-title"><span data-en>Portable eye-movement imaging device</span><span data-kr>휴대용 안구운동 영상 생성 장치</span></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-2019-0120787</span><a class="patent-link" href="https://doi.org/10.8080/1020190120787" target="_blank" rel="noopener">원문 →</a></div>
+        </div>
+      </div>
+      <div class="patent">
+        <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+        <div class="patent-body">
+          <div class="patent-title"><span data-en>In-hospital patient transport system</span><span data-kr>병원 내 환자 이송 시스템</span></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-2354777 (2022.01.19)</span><a class="patent-link" href="https://doi.org/10.8080/1020190044065" target="_blank" rel="noopener">원문 →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-tag"><span data-en>Contact</span><span data-kr>연락처</span></div>
+      <h2><span data-en>Let's connect</span><span data-kr>연결하기</span></h2>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card reveal" href="mailto:hyojungkim.kor@gmail.com">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+        <div class="ct">Email</div><div class="cv">hyojungkim.kor@gmail.com</div>
+      </a>
+      <a class="contact-card reveal" href="https://pubmed.ncbi.nlm.nih.gov/?term=Kim+Hyo-Jung+vestibular+Kim+Ji-Soo" target="_blank" rel="noopener">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <div class="ct">PubMed</div><div class="cv"><span data-en>View articles →</span><span data-kr>논문 보기 →</span></div>
+      </a>
+      <a class="contact-card reveal" href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ&amp;hl=ko" target="_blank" rel="noopener">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <div class="ct">Google Scholar</div><div class="cv"><span data-en>View profile →</span><span data-kr>프로필 보기 →</span></div>
+      </a>
+      <a class="contact-card reveal" href="https://www.ibric.org/s.do?gOMVGlSFQJ" target="_blank" rel="noopener">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg></div>
+        <div class="ct"><span data-en>Featured</span><span data-kr>한빛사</span></div><div class="cv"><span data-en>HanBitSa · BRIC</span><span data-kr>한빛사 · BRIC</span></div>
+      </a>
+      <a class="contact-card reveal" href="https://www.snubh.org/" target="_blank" rel="noopener">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
+        <div class="ct"><span data-en>Affiliation</span><span data-kr>소속</span></div><div class="cv">SNU Bundang Hospital</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> Hyo-Jung Kim, PhD · 김효정 &nbsp;·&nbsp; <span data-en>Neuroscience · Neuro-otology · Neuro-ophthalmology · Clinical Laboratory Science · Seoul, Republic of Korea</span><span data-kr>신경과학 · 신경이과학 · 신경안과학 · 임상검사의학 · 대한민국 서울</span></p>
+  </div>
+</footer>
+
+<script>
+const PUBS = [
+  // FIRST AUTHOR
+  {t:"Intellectual disability and structural defects of the CaV2.1 channel in episodic ataxia type 2: correlation using an AI prediction model",a:"Kim HJ, et al.",j:"Journal of Neurology",y:2026,doi:"10.1007/s00415-026-13731-2",type:"first"},
+  {t:"Seesaw nystagmus in oculopalatal tremor",a:"Kim HJ, et al.",j:"Journal of Neurology",y:2025,doi:"10.1007/s00415-025-13391-8",type:"first"},
+  {t:"Diagnostic utility of the Niigata PPPD Questionnaire (NPQ) for persistent postural-perceptual dizziness",a:"Kim HJ, et al.",j:"Journal of Vestibular Research",y:2025,doi:"10.1177/09574271251382800",type:"first"},
+  {t:"Healthcare costs due to dizziness/vertigo in Korea: analyses using public HIRA data",a:"Kim HJ, et al.",j:"Journal of Korean Medical Science",y:2024,doi:"10.3346/jkms.2024.39.e214",type:"first"},
+  {t:"Effect of self-treatment of recurrent benign paroxysmal positional vertigo: a randomized clinical trial",a:"Kim HJ, et al.",j:"JAMA Neurology",y:2023,doi:"10.1001/jamaneurol.2022.4944",type:"first"},
+  {t:"Pearls & Oy-sters: Vibration-induced downbeat nystagmus, a new cerebellar sign in paraneoplastic syndrome",a:"Kim HJ, et al.",j:"Neurology",y:2023,doi:"10.1212/WNL.0000000000201466",type:"first"},
+  {t:"Otoconial degeneration after transient ischemia induced by four-vessel occlusion in rats",a:"Kim HJ, et al.",j:"Journal of Clinical Neurology",y:2023,doi:"10.3988/jcn.2022.0463",type:"first"},
+  {t:"Isolated inferior rectus palsy due to oculomotor dorsal subnucleus infarction",a:"Kim HJ, et al.",j:"Ophthalmology",y:2022,doi:"10.1016/j.ophtha.2022.08.015",type:"first"},
+  {t:"Update on benign paroxysmal positional vertigo",a:"Kim HJ, Park JH, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-020-10314-7",type:"first"},
+  {t:"Protective effects of deferoxamine on vestibulotoxicity in a gentamicin-induced bilateral vestibulopathy rat model",a:"Kim HJ, Lee JO, Kim JS",j:"Frontiers in Neurology",y:2021,doi:"10.3389/fneur.2021.650752",type:"first"},
+  {t:"Etiologic distribution of dizziness and vertigo in a referral-based dizziness clinic in South Korea",a:"Kim HJ, Lee JO, Choi JY, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09831-2",type:"first"},
+  {t:"Questionnaire-based diagnosis of benign paroxysmal positional vertigo",a:"Kim HJ, Song JM, Zhong L, Yang X, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000008876",type:"first"},
+  {t:"Neuroprotection effects of ischemic preconditioning in a posterior circulation ischemia rat model",a:"Kim HJ, Lee JO, Kim JS",j:"J Clin Neuro-Ophthalmol (KR)",y:2019,doi:null,type:"first"},
+  {t:"The patterns of recurrences in idiopathic benign paroxysmal positional vertigo and self-treatment evaluation",a:"Kim HJ, Kim JS",j:"Frontiers in Neurology",y:2017,doi:"10.3389/fneur.2017.00690",type:"first"},
+  {t:"Altered processing of otolithic information in isolated lateral medullary infarction",a:"Kim HJ, Park JH, Kim S, Kim JS",j:"Journal of Neurology",y:2016,doi:"10.1007/s00415-016-8276-z",type:"first"},
+  {t:"Bilaterally abnormal head impulse tests indicate a large cerebellopontine angle tumor",a:"Kim HJ, Park SH, et al., Kim JS",j:"Journal of Clinical Neurology",y:2016,doi:"10.3988/jcn.2016.12.1.65",type:"first"},
+  {t:"Isolated vestibular nuclear infarction: report of two cases and review of the literature",a:"Kim HJ, Lee SH, Park JH, Choi JY, Kim JS",j:"Journal of Neurology",y:2014,doi:"10.1007/s00415-013-7139-0",type:"first"},
+  {t:"Ocular VEMPs to head tap and cervical VEMPs to air-conducted sounds in isolated internuclear ophthalmoplegia",a:"Kim HJ, Lee JH, Kim JS",j:"Clinical Neurophysiology",y:2014,doi:"10.1016/j.clinph.2013.10.013",type:"first"},
+  {t:"Rebound upbeat nystagmus after lateral gaze in episodic ataxia type 2",a:"Kim HJ, Choi JH, Shin JH, Choi KD, Zee DS, Kim JS",j:"The Cerebellum",y:2014,doi:"10.1007/s12311-014-0547-6",type:"first"},
+  {t:"Gentamicin-induced bilateral vestibulopathy in rabbit: vestibular dysfunction and histopathology",a:"Kim HJ, Lee JO, Koo JW, Ban J, Kim JS",j:"The Laryngoscope",y:2013,doi:"10.1002/lary.24106",type:"first"},
+  // CORRESPONDING AUTHOR
+  {t:"Torsional saccadic palsy in episodic ataxia type 2",a:"…, Kim HJ",j:"Journal of Neurology",y:2024,doi:"10.1007/s00415-024-12636-2",type:"corr"},
+  {t:"Intellectual disability in episodic ataxia type 2: beyond paroxysmal vertigo and ataxia",a:"…, Kim HJ",j:"Journal of Clinical Neurology",y:2024,doi:"10.3988/jcn.2024.0274",type:"corr"},
+  {t:"Vertical saccadic slowing in episodic ataxia type 2",a:"…, Kim HJ",j:"Journal of Clinical Neurology",y:2022,doi:"10.3988/jcn.2022.18.6.726",type:"corr"},
+  // CO-AUTHOR
+  {t:"Therapeutic efficacy of nimodipine and topiramate on migraine and vestibular migraine: a prospective multicenter open-label study",a:"…, Kim HJ, …",j:"PLOS One",y:2026,doi:"10.1371/journal.pone.0344948",type:"co"},
+  {t:"Spontaneous nystagmus violating Alexander's law: neural substrates and mechanisms",a:"…, Kim HJ, …",j:"The Cerebellum",y:2025,doi:"10.1007/s12311-025-01788-0",type:"co"},
+  {t:"Treatment maneuvers in cupulolithiasis of the posterior canal BPPV: a randomized clinical trial",a:"…, Kim HJ, …",j:"JAMA Network Open",y:2025,doi:"10.1001/jamanetworkopen.2025.0972",type:"co"},
+  {t:"Expanding clinical spectrum of anti-GQ1b antibody syndrome: a review",a:"…, Kim HJ, …",j:"JAMA Neurology",y:2024,doi:"10.1001/jamaneurol.2024.1123",type:"co"},
+  {t:"Periodic vertigo and downbeat nystagmus while supine: dysfunction of Purkinje cells coding gravity",a:"…, Kim HJ, …",j:"Ann Clin Transl Neurol",y:2023,doi:"10.1002/acn3.51883",type:"co"},
+  {t:"Effect of a false inertial cue in the velocity-storage circuit on head posture and inertia perception",a:"…, Kim HJ, …",j:"The Journal of Neuroscience",y:2023,doi:"10.1523/jneurosci.1148-22.2023",type:"co"},
+  {t:"Incidence, characteristics, and neuroanatomical substrates of vestibular symptoms in supratentorial stroke",a:"…, Kim HJ, …",j:"Journal of Neurology",y:2023,doi:"10.1007/s00415-023-11566-9",type:"co"},
+  {t:"Vestibular syncope: clinical characteristics and mechanism",a:"…, Kim HJ, …",j:"Ann Clin Transl Neurol",y:2022,doi:"10.1002/acn3.51661",type:"co"},
+  {t:"Risk of future stroke in patients with a diagnosis of peripheral vertigo in the emergency department",a:"…, Kim HJ, …",j:"European Journal of Neurology",y:2022,doi:"10.1111/ene.15543",type:"co"},
+  {t:"Bilateral vestibulopathy: the causes, diagnosis, and treatments",a:"…, Kim HJ",j:"Current Opinion in Neurology",y:2022,doi:"10.1097/wco.0000000000001014",type:"co"},
+  {t:"Can dyssynergia of vestibulosympathetic and baroreflexes cause vestibular syncope? A hypothesis based on the velocity-storage function",a:"Kwon E, Kim HJ, Lee JY, Kim JS, Choi JY",j:"The Cerebellum",y:2021,doi:"10.1007/s12311-021-01296-x",type:"co"},
+  {t:"Central positional nystagmus in inferior cerebellar peduncle lesions: a case series",a:"Lee SU, Kim HJ, Lee ES, Choi JH, Choi JY, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-021-10435-7",type:"co"},
+  {t:"Pearls & Oy-sters: Divergence nystagmus",a:"Kwon E, Lee JY, Choi JY, Kim HJ, Kim JS",j:"Neurology",y:2021,doi:"10.1212/WNL.0000000000011273",type:"co"},
+  {t:"Diagnostic value of straight head hanging in posterior canal benign paroxysmal positional vertigo",a:"Ling X, Kim HJ, Lee JH, Choi JY, Yang X, Kim JS",j:"Journal of Clinical Neurology",y:2021,doi:"10.3988/jcn.2021.17.4.558",type:"co"},
+  {t:"Vestibular paroxysmia associated with typewriter tinnitus: a case report and literature review",a:"Koo YJ, Kim HJ, Choi JY, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-021-10525-6",type:"co"},
+  {t:"Vestibular perception in time and space during whole-body rotation in humans",a:"Choi JY, Kwon E, Lee JY, Song JM, Kim HJ, Kim JS",j:"The Cerebellum",y:2021,doi:"10.1007/s12311-020-01229-0",type:"co"},
+  {t:"Bilateral vestibular dysfunction",a:"Lee SU, Kim HJ, Kim JS",j:"Seminars in Neurology",y:2020,doi:"10.1055/s-0039-3402066",type:"co"},
+  {t:"Positioning velocity matters in central paroxysmal positional vertigo: implication for the mechanism",a:"Ling X, Lee JH, Choi JY, Kim HJ, Kim JS",j:"Frontiers in Neurology",y:2020,doi:"10.3389/fneur.2020.591602",type:"co"},
+  {t:"Ictal downbeat nystagmus in Meniere's disease",a:"Lee SU, Kim HJ, Choi JY, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000010653",type:"co"},
+  {t:"Evolution of the vestibular function during head impulses in spinocerebellar ataxia type 6",a:"Lee SU, Kim HJ, Choi JY, Park JY, Kim JM, Yang X, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09756-w",type:"co"},
+  {t:"Prevention of benign paroxysmal positional vertigo with vitamin D supplementation",a:"Jeong SH, Kim HJ, Choi JY, et al., Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000010343",type:"co"},
+  {t:"Combined jerky and pendular nystagmus in medullary hemorrhage",a:"Han SW, Kim HJ, Choi JY, Yang X, Kim DE, Kim JS",j:"Journal of Clinical Neurology",y:2020,doi:"10.3988/jcn.2020.16.3.491",type:"co"},
+  {t:"Determinants for bedside lateralization of BPPV involving the horizontal semicircular canal",a:"Choi SY, Oh SW, Kim HJ, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09763-x",type:"co"},
+  {t:"Neuro-Behcet's disease presenting as isolated vestibular syndrome",a:"Park E, Kim HJ, Choi JY, Kim JS, Im GJ, Yu S, Lee SU",j:"Journal of Clinical Neurology",y:2020,doi:"10.3988/jcn.2020.16.3.499",type:"co"},
+  {t:"Alternating monocular adducting saccadic pulses and dissociated adducting nystagmus in spinocerebellar ataxia type 3",a:"Lee SU, Kim HJ, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-019-09609-1",type:"co"},
+  {t:"Evolution in the findings of head-impulse tests during the attacks of Meniere's disease",a:"Lee SU, Kim HJ, Choi JY, Koo JW, Yang X, Kim JS",j:"Otology & Neurotology",y:2020,doi:"10.1097/MAO.0000000000002645",type:"co"},
+  {t:"Clinical Reasoning: Sudden hearing loss with vertigo in a 42-year-old woman",a:"Choi JY, Kim HJ, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000009591",type:"co"}
+];
+
+const KW=[
+["gentamicin-induced bilateral vestibulopathy in rabbit",["Ototoxicity","Vestibulo-ocular reflex","Gentamicin","Rabbits"]],
+["ocular vemps to head tap",["Vestibular evoked myogenic potentials","Internuclear ophthalmoplegia","Medial longitudinal fasciculus","Ocular tilt reaction","Vertigo"]],
+["isolated vestibular nuclear infarction",["Vestibulopathy","Vestibular nucleus","Lateral medullary infarction","Vertigo"]],
+["rebound upbeat nystagmus",["Gaze-evoked nystagmus","Rebound nystagmus","Lateropulsion","Episodic ataxia"]],
+["bilaterally abnormal head impulse",["Vertigo","Vestibulo-ocular reflex","Cerebellopontine-angle tumor","Head impulse test","Flocculus"]],
+["altered processing of otolithic",["Vestibular evoked myogenic potentials","Lateral medullary infarction","Subjective visual vertical","Ocular tilt reaction","Utricle","Saccule"]],
+["patterns of recurrences",["Vertigo","Benign paroxysmal positional vertigo","Treatment","Recurrence","Self-administration"]],
+["neuroprotection effects of ischemic",["Ischemic preconditioning","Ischemia","Vertigo","Medial vestibular nucleus","Rat"]],
+["etiologic distribution of dizziness",["Dizziness","Vertigo","Etiology","Age","Sex","South Korea"]],
+["update on benign paroxysmal",["Dizziness","Vertigo","Benign paroxysmal positional vertigo"]],
+["deferoxamine",["Deferoxamine","Iron-chelating agent","Ototoxicity","Rats","Dizziness","Bilateral vestibulopathy"]],
+["otoconial degeneration",["Otoconia","Ischemia","Benign paroxysmal positional vertigo","Rats"]],
+["healthcare costs",["Dizziness","Vertigo","Health care economics","Insurance","Healthcare costs","Health policy"]],
+["intellectual disability in episodic ataxia type 2: beyond",["Vertigo","Ataxia","Episodic ataxia type 2","Intellectual disability"]],
+["niigata",["Persistent postural-perceptual dizziness","Niigata PPPD questionnaire","Dizziness handicap inventory","Vestibular disorders"]]
+];
+const listEl=document.getElementById('pubList');
+const noRes=document.getElementById('noResults');
+let curFilter='all',curSearch='';
+
+function authorsHTML(s){return s.replace(/Kim HJ/g,'<span class="me">Kim HJ</span>');}
+function render(){
+  const filtered=PUBS.filter(p=>{
+    const okF = p.type!=='co' && (curFilter==='all' || p.type===curFilter);
+    const okS = !curSearch || (p.t+' '+p.j+' '+p.a.join(' ')).toLowerCase().includes(curSearch);
+    return okF && okS;
+  });
+  const years=[...new Set(filtered.map(p=>p.y))].sort((a,b)=>b-a);
+  listEl.innerHTML='';
+  noRes.style.display = filtered.length? 'none':'block';
+  const kr=document.body.classList.contains('lang-kr');
+  let idx=filtered.length;
+  years.forEach(yr=>{
+    const grp=document.createElement('div');grp.className='year-group';
+    grp.innerHTML='<div class="year-label">'+yr+'</div>';
+    filtered.filter(p=>p.y===yr).forEach(p=>{
+      const roleTxt = p.type==='first' ? (kr?'주저자':'First author') : p.type==='corr' ? (kr?'교신저자':'Corresponding') : (kr?'공저자':'Co-author');
+      const doiHTML = p.doi ? '<a class="doi-link" href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener">DOI <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>' : '';
+      const tl=p.t.toLowerCase();let kws=[];for(const kp of KW){if(tl.includes(kp[0])){kws=kp[1];break;}}
+      const kwHTML=kws.length?'<div class="pub-kw">'+kws.map(k=>'<span>#'+k+'</span>').join('')+'</div>':'';
+      const el=document.createElement('div');el.className='pub';
+      el.innerHTML=
+        '<div class="pub-idx">'+String(idx--).padStart(2,'0')+'</div>'+
+        '<div class="pub-main">'+
+          '<div class="pub-title">'+p.t+'</div>'+
+          '<div class="pub-authors">'+authorsHTML(p.a)+'</div>'+
+          '<div class="pub-meta">'+
+            '<span class="badge journal">'+p.j+'</span>'+
+            '<span class="badge role '+(p.type==='co'?'co':p.type==='corr'?'corr':'')+'">'+roleTxt+'</span>'+
+            doiHTML+
+          '</div>'+kwHTML+
+        '</div>';
+      grp.appendChild(el);
+    });
+    listEl.appendChild(grp);
+  });
+}
+document.querySelectorAll('.filter-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');curFilter=b.dataset.filter;render();
+  });
+});
+document.getElementById('pubSearch').addEventListener('input',e=>{curSearch=e.target.value.toLowerCase().trim();render();});
+
+function setLang(l){
+  document.body.classList.toggle('lang-kr',l==='kr');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.getElementById('btn-kr').classList.toggle('active',l==='kr');
+  document.documentElement.lang=l==='kr'?'ko':'en';
+  document.getElementById('pubSearch').placeholder = l==='kr'?'제목·키워드 검색…':'Search title or keyword…';
+  render();
+}
+
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
