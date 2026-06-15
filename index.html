@@ -124,6 +124,8 @@
   .pub-idx{font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--faint);min-width:26px;padding-top:2px}
   .pub-main{flex:1;min-width:0}
   .pub-title{font-size:15.5px;font-weight:600;color:var(--text);margin-bottom:6px;line-height:1.4}
+  .pub-title a{color:inherit;text-decoration:none;transition:.2s}
+  .pub-title a:hover{color:var(--accent2);text-decoration:underline}
   .pub-authors{font-size:13.5px;color:var(--muted);margin-bottom:9px}
   .pub-authors .me{color:var(--accent2);font-weight:700}
   .pub-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -228,15 +230,15 @@
           </li>
         </ul>
         <p class="lead" style="margin-bottom:26px">
-          <span data-en>Clinician-scientist studying the mechanisms, diagnosis, and treatment of dizziness and vertigo — from large-scale clinical epidemiology to vestibular animal models.</span>
-          <span data-kr>어지럼·현훈의 기전, 진단, 치료를 연구하는 임상과학자. 대규모 임상 역학 연구부터 전정 동물 모델까지 폭넓게 다룹니다.</span>
+          <span data-en>Neuroscientist and translational researcher studying the mechanisms, diagnosis, and treatment of dizziness and vertigo — from large-scale clinical epidemiology to vestibular animal models.</span>
+          <span data-kr>어지럼·현훈의 기전, 진단, 치료를 연구하는 신경과학자이자 중개연구자. 대규모 임상 역학 연구부터 전정 동물 모델까지 폭넓게 다룹니다.</span>
         </p>
         <div class="cta">
           <a class="btn btn-primary" href="#publications">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             <span data-en>View Publications</span><span data-kr>연구업적 보기</span>
           </a>
-          <a class="btn btn-ghost" href="mailto:hyojungkim.kor@gmail.com">
+          <a class="btn btn-ghost js-email" href="#" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
             <span data-en>Get in touch</span><span data-kr>연락하기</span>
           </a>
@@ -252,7 +254,7 @@
     </div>
 
     <div class="metrics">
-      <div class="metric reveal"><div class="num">23</div><div class="lbl"><span data-en>First / Corresponding</span><span data-kr>주저자·교신저자</span></div></div>
+      <div class="metric reveal"><div class="num"><span class="cnt-fc">23</span></div><div class="lbl"><span data-en>First / Corresponding</span><span data-kr>주저자·교신저자</span></div></div>
       <div class="metric reveal"><div class="num">178</div><div class="lbl"><span data-en>Total Publications</span><span data-kr>총 논문 수</span></div></div>
       <div class="metric reveal"><div class="num">5,761</div><div class="lbl"><span data-en>Total Citations</span><span data-kr>총 인용수</span></div></div>
       <div class="metric reveal"><div class="num">41</div><div class="lbl"><span data-en>h-index (Scholar)</span><span data-kr>h-지수 (Scholar)</span></div></div>
@@ -333,7 +335,7 @@
     <div class="section-head reveal">
       <div class="section-tag"><span data-en>Publications</span><span data-kr>연구업적</span></div>
       <h2><span data-en>First-author &amp; corresponding-author papers</span><span data-kr>주저자·교신저자 논문</span></h2>
-      <p class="lead"><span data-en>23 papers where Dr. Kim is the first or corresponding author. The full publication list, including co-authored work, is available on <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>.</span><span data-kr>김효정 박사가 제1저자 또는 교신저자로 참여한 23편입니다. 공저자 논문을 포함한 전체 목록은 <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>에서 확인하실 수 있습니다.</span></p>
+      <p class="lead"><span data-en><span class="cnt-fc">23</span> papers where Dr. Kim is the first or corresponding author. The full publication list, including co-authored work, is available on <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>.</span><span data-kr>김효정 박사가 제1저자 또는 교신저자로 참여한 <span class="cnt-fc">23</span>편입니다. 공저자 논문을 포함한 전체 목록은 <a href="https://scholar.google.com/citations?user=MZBJkPgAAAAJ" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:underline">Google Scholar</a>에서 확인하실 수 있습니다.</span></p>
     </div>
 
     <div class="reveal" style="margin:6px 0 22px">
@@ -370,21 +372,21 @@
         <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
         <div class="patent-body">
           <div class="patent-title"><span data-en>Device, method, and computer program for self-diagnosis and treatment of benign paroxysmal positional vertigo</span><span data-kr>양성돌발체위현훈의 웹 기반 자가 진단/치료 장치 및 방법</span></div>
-          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-1947036 (2019.02.01)</span><a class="patent-link" href="https://doi.org/10.8080/1020170055316" target="_blank" rel="noopener">원문 →</a><span>·</span><span>US 11,594,332 B2 (2023.02.28)</span><a class="patent-link" href="https://patents.google.com/patent/US11594332B2/en" target="_blank" rel="noopener">원문 →</a></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><a class="patent-link" href="https://doi.org/10.8080/1020170055316" target="_blank" rel="noopener">KR 10-1947036 (2019.02.01)</a><span>·</span><a class="patent-link" href="https://patents.google.com/patent/US11594332B2/en" target="_blank" rel="noopener">US 11,594,332 B2 (2023.02.28)</a></div>
         </div>
       </div>
       <div class="patent">
         <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
         <div class="patent-body">
           <div class="patent-title"><span data-en>Portable eye-movement imaging device</span><span data-kr>휴대용 안구운동 영상 생성 장치</span></div>
-          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-2019-0120787</span><a class="patent-link" href="https://doi.org/10.8080/1020190120787" target="_blank" rel="noopener">원문 →</a></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><a class="patent-link" href="https://doi.org/10.8080/1020190120787" target="_blank" rel="noopener">KR 10-2019-0120787</a></div>
         </div>
       </div>
       <div class="patent">
         <div class="ip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
         <div class="patent-body">
           <div class="patent-title"><span data-en>In-hospital patient transport system</span><span data-kr>병원 내 환자 이송 시스템</span></div>
-          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><span>KR 10-2354777 (2022.01.19)</span><a class="patent-link" href="https://doi.org/10.8080/1020190044065" target="_blank" rel="noopener">원문 →</a></div>
+          <div class="patent-meta"><span class="patent-badge"><span data-en>Registered</span><span data-kr>등록</span></span><a class="patent-link" href="https://doi.org/10.8080/1020190044065" target="_blank" rel="noopener">KR 10-2354777 (2022.01.19)</a></div>
         </div>
       </div>
     </div>
@@ -398,9 +400,9 @@
       <h2><span data-en>Let's connect</span><span data-kr>연결하기</span></h2>
     </div>
     <div class="contact-grid">
-      <a class="contact-card reveal" href="mailto:hyojungkim.kor@gmail.com">
+      <a class="contact-card reveal js-email" href="#">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
-        <div class="ct">Email</div><div class="cv">hyojungkim.kor@gmail.com</div>
+        <div class="ct">Email</div><div class="cv"><span data-en>Send email →</span><span data-kr>이메일 보내기 →</span></div>
       </a>
       <a class="contact-card reveal" href="https://pubmed.ncbi.nlm.nih.gov/?term=Kim+Hyo-Jung+vestibular+Kim+Ji-Soo" target="_blank" rel="noopener">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
@@ -414,9 +416,9 @@
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg></div>
         <div class="ct"><span data-en>Featured</span><span data-kr>한빛사</span></div><div class="cv"><span data-en>HanBitSa · BRIC</span><span data-kr>한빛사 · BRIC</span></div>
       </a>
-      <a class="contact-card reveal" href="https://www.snubh.org/" target="_blank" rel="noopener">
-        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
-        <div class="ct"><span data-en>Affiliation</span><span data-kr>소속</span></div><div class="cv">SNU Bundang Hospital</div>
+      <a class="contact-card reveal" href="https://orcid.org/0000-0002-2027-6341" target="_blank" rel="noopener">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor"><path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zM86.3 186.2H70.9V79.1h15.4v107.1zM78.6 65.4c-5.5 0-10-4.5-10-10s4.5-9.9 10-9.9 10 4.4 10 9.9-4.5 10-10 10zm74.6 120.8h-39V79.1h38.4c36.5 0 52.6 26.1 52.6 53.6 0 29.9-23.4 53.5-52 53.5zm-23.6-93.3v79.2h22.8c20.3 0 33.4-15.5 33.4-39.5 0-21.9-13.6-39.7-37.4-39.7h-18.8z"/></svg></div>
+        <div class="ct">ORCID</div><div class="cv">0000-0002-2027-6341</div>
       </a>
     </div>
   </div>
@@ -428,80 +430,9 @@
   </div>
 </footer>
 
+<script src="publications.js"></script>
 <script>
-const PUBS = [
-  // FIRST AUTHOR
-  {t:"Intellectual disability and structural defects of the CaV2.1 channel in episodic ataxia type 2: correlation using an AI prediction model",a:"Kim HJ, et al.",j:"Journal of Neurology",y:2026,doi:"10.1007/s00415-026-13731-2",type:"first"},
-  {t:"Seesaw nystagmus in oculopalatal tremor",a:"Kim HJ, et al.",j:"Journal of Neurology",y:2025,doi:"10.1007/s00415-025-13391-8",type:"first"},
-  {t:"Diagnostic utility of the Niigata PPPD Questionnaire (NPQ) for persistent postural-perceptual dizziness",a:"Kim HJ, et al.",j:"Journal of Vestibular Research",y:2025,doi:"10.1177/09574271251382800",type:"first"},
-  {t:"Healthcare costs due to dizziness/vertigo in Korea: analyses using public HIRA data",a:"Kim HJ, et al.",j:"Journal of Korean Medical Science",y:2024,doi:"10.3346/jkms.2024.39.e214",type:"first"},
-  {t:"Effect of self-treatment of recurrent benign paroxysmal positional vertigo: a randomized clinical trial",a:"Kim HJ, et al.",j:"JAMA Neurology",y:2023,doi:"10.1001/jamaneurol.2022.4944",type:"first"},
-  {t:"Pearls & Oy-sters: Vibration-induced downbeat nystagmus, a new cerebellar sign in paraneoplastic syndrome",a:"Kim HJ, et al.",j:"Neurology",y:2023,doi:"10.1212/WNL.0000000000201466",type:"first"},
-  {t:"Otoconial degeneration after transient ischemia induced by four-vessel occlusion in rats",a:"Kim HJ, et al.",j:"Journal of Clinical Neurology",y:2023,doi:"10.3988/jcn.2022.0463",type:"first"},
-  {t:"Isolated inferior rectus palsy due to oculomotor dorsal subnucleus infarction",a:"Kim HJ, et al.",j:"Ophthalmology",y:2022,doi:"10.1016/j.ophtha.2022.08.015",type:"first"},
-  {t:"Update on benign paroxysmal positional vertigo",a:"Kim HJ, Park JH, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-020-10314-7",type:"first"},
-  {t:"Protective effects of deferoxamine on vestibulotoxicity in a gentamicin-induced bilateral vestibulopathy rat model",a:"Kim HJ, Lee JO, Kim JS",j:"Frontiers in Neurology",y:2021,doi:"10.3389/fneur.2021.650752",type:"first"},
-  {t:"Etiologic distribution of dizziness and vertigo in a referral-based dizziness clinic in South Korea",a:"Kim HJ, Lee JO, Choi JY, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09831-2",type:"first"},
-  {t:"Questionnaire-based diagnosis of benign paroxysmal positional vertigo",a:"Kim HJ, Song JM, Zhong L, Yang X, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000008876",type:"first"},
-  {t:"Neuroprotection effects of ischemic preconditioning in a posterior circulation ischemia rat model",a:"Kim HJ, Lee JO, Kim JS",j:"J Clin Neuro-Ophthalmol (KR)",y:2019,doi:null,type:"first"},
-  {t:"The patterns of recurrences in idiopathic benign paroxysmal positional vertigo and self-treatment evaluation",a:"Kim HJ, Kim JS",j:"Frontiers in Neurology",y:2017,doi:"10.3389/fneur.2017.00690",type:"first"},
-  {t:"Altered processing of otolithic information in isolated lateral medullary infarction",a:"Kim HJ, Park JH, Kim S, Kim JS",j:"Journal of Neurology",y:2016,doi:"10.1007/s00415-016-8276-z",type:"first"},
-  {t:"Bilaterally abnormal head impulse tests indicate a large cerebellopontine angle tumor",a:"Kim HJ, Park SH, et al., Kim JS",j:"Journal of Clinical Neurology",y:2016,doi:"10.3988/jcn.2016.12.1.65",type:"first"},
-  {t:"Isolated vestibular nuclear infarction: report of two cases and review of the literature",a:"Kim HJ, Lee SH, Park JH, Choi JY, Kim JS",j:"Journal of Neurology",y:2014,doi:"10.1007/s00415-013-7139-0",type:"first"},
-  {t:"Ocular VEMPs to head tap and cervical VEMPs to air-conducted sounds in isolated internuclear ophthalmoplegia",a:"Kim HJ, Lee JH, Kim JS",j:"Clinical Neurophysiology",y:2014,doi:"10.1016/j.clinph.2013.10.013",type:"first"},
-  {t:"Rebound upbeat nystagmus after lateral gaze in episodic ataxia type 2",a:"Kim HJ, Choi JH, Shin JH, Choi KD, Zee DS, Kim JS",j:"The Cerebellum",y:2014,doi:"10.1007/s12311-014-0547-6",type:"first"},
-  {t:"Gentamicin-induced bilateral vestibulopathy in rabbit: vestibular dysfunction and histopathology",a:"Kim HJ, Lee JO, Koo JW, Ban J, Kim JS",j:"The Laryngoscope",y:2013,doi:"10.1002/lary.24106",type:"first"},
-  // CORRESPONDING AUTHOR
-  {t:"Torsional saccadic palsy in episodic ataxia type 2",a:"…, Kim HJ",j:"Journal of Neurology",y:2024,doi:"10.1007/s00415-024-12636-2",type:"corr"},
-  {t:"Intellectual disability in episodic ataxia type 2: beyond paroxysmal vertigo and ataxia",a:"…, Kim HJ",j:"Journal of Clinical Neurology",y:2024,doi:"10.3988/jcn.2024.0274",type:"corr"},
-  {t:"Vertical saccadic slowing in episodic ataxia type 2",a:"…, Kim HJ",j:"Journal of Clinical Neurology",y:2022,doi:"10.3988/jcn.2022.18.6.726",type:"corr"},
-  // CO-AUTHOR
-  {t:"Therapeutic efficacy of nimodipine and topiramate on migraine and vestibular migraine: a prospective multicenter open-label study",a:"…, Kim HJ, …",j:"PLOS One",y:2026,doi:"10.1371/journal.pone.0344948",type:"co"},
-  {t:"Spontaneous nystagmus violating Alexander's law: neural substrates and mechanisms",a:"…, Kim HJ, …",j:"The Cerebellum",y:2025,doi:"10.1007/s12311-025-01788-0",type:"co"},
-  {t:"Treatment maneuvers in cupulolithiasis of the posterior canal BPPV: a randomized clinical trial",a:"…, Kim HJ, …",j:"JAMA Network Open",y:2025,doi:"10.1001/jamanetworkopen.2025.0972",type:"co"},
-  {t:"Expanding clinical spectrum of anti-GQ1b antibody syndrome: a review",a:"…, Kim HJ, …",j:"JAMA Neurology",y:2024,doi:"10.1001/jamaneurol.2024.1123",type:"co"},
-  {t:"Periodic vertigo and downbeat nystagmus while supine: dysfunction of Purkinje cells coding gravity",a:"…, Kim HJ, …",j:"Ann Clin Transl Neurol",y:2023,doi:"10.1002/acn3.51883",type:"co"},
-  {t:"Effect of a false inertial cue in the velocity-storage circuit on head posture and inertia perception",a:"…, Kim HJ, …",j:"The Journal of Neuroscience",y:2023,doi:"10.1523/jneurosci.1148-22.2023",type:"co"},
-  {t:"Incidence, characteristics, and neuroanatomical substrates of vestibular symptoms in supratentorial stroke",a:"…, Kim HJ, …",j:"Journal of Neurology",y:2023,doi:"10.1007/s00415-023-11566-9",type:"co"},
-  {t:"Vestibular syncope: clinical characteristics and mechanism",a:"…, Kim HJ, …",j:"Ann Clin Transl Neurol",y:2022,doi:"10.1002/acn3.51661",type:"co"},
-  {t:"Risk of future stroke in patients with a diagnosis of peripheral vertigo in the emergency department",a:"…, Kim HJ, …",j:"European Journal of Neurology",y:2022,doi:"10.1111/ene.15543",type:"co"},
-  {t:"Bilateral vestibulopathy: the causes, diagnosis, and treatments",a:"…, Kim HJ",j:"Current Opinion in Neurology",y:2022,doi:"10.1097/wco.0000000000001014",type:"co"},
-  {t:"Can dyssynergia of vestibulosympathetic and baroreflexes cause vestibular syncope? A hypothesis based on the velocity-storage function",a:"Kwon E, Kim HJ, Lee JY, Kim JS, Choi JY",j:"The Cerebellum",y:2021,doi:"10.1007/s12311-021-01296-x",type:"co"},
-  {t:"Central positional nystagmus in inferior cerebellar peduncle lesions: a case series",a:"Lee SU, Kim HJ, Lee ES, Choi JH, Choi JY, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-021-10435-7",type:"co"},
-  {t:"Pearls & Oy-sters: Divergence nystagmus",a:"Kwon E, Lee JY, Choi JY, Kim HJ, Kim JS",j:"Neurology",y:2021,doi:"10.1212/WNL.0000000000011273",type:"co"},
-  {t:"Diagnostic value of straight head hanging in posterior canal benign paroxysmal positional vertigo",a:"Ling X, Kim HJ, Lee JH, Choi JY, Yang X, Kim JS",j:"Journal of Clinical Neurology",y:2021,doi:"10.3988/jcn.2021.17.4.558",type:"co"},
-  {t:"Vestibular paroxysmia associated with typewriter tinnitus: a case report and literature review",a:"Koo YJ, Kim HJ, Choi JY, Kim JS",j:"Journal of Neurology",y:2021,doi:"10.1007/s00415-021-10525-6",type:"co"},
-  {t:"Vestibular perception in time and space during whole-body rotation in humans",a:"Choi JY, Kwon E, Lee JY, Song JM, Kim HJ, Kim JS",j:"The Cerebellum",y:2021,doi:"10.1007/s12311-020-01229-0",type:"co"},
-  {t:"Bilateral vestibular dysfunction",a:"Lee SU, Kim HJ, Kim JS",j:"Seminars in Neurology",y:2020,doi:"10.1055/s-0039-3402066",type:"co"},
-  {t:"Positioning velocity matters in central paroxysmal positional vertigo: implication for the mechanism",a:"Ling X, Lee JH, Choi JY, Kim HJ, Kim JS",j:"Frontiers in Neurology",y:2020,doi:"10.3389/fneur.2020.591602",type:"co"},
-  {t:"Ictal downbeat nystagmus in Meniere's disease",a:"Lee SU, Kim HJ, Choi JY, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000010653",type:"co"},
-  {t:"Evolution of the vestibular function during head impulses in spinocerebellar ataxia type 6",a:"Lee SU, Kim HJ, Choi JY, Park JY, Kim JM, Yang X, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09756-w",type:"co"},
-  {t:"Prevention of benign paroxysmal positional vertigo with vitamin D supplementation",a:"Jeong SH, Kim HJ, Choi JY, et al., Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000010343",type:"co"},
-  {t:"Combined jerky and pendular nystagmus in medullary hemorrhage",a:"Han SW, Kim HJ, Choi JY, Yang X, Kim DE, Kim JS",j:"Journal of Clinical Neurology",y:2020,doi:"10.3988/jcn.2020.16.3.491",type:"co"},
-  {t:"Determinants for bedside lateralization of BPPV involving the horizontal semicircular canal",a:"Choi SY, Oh SW, Kim HJ, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-020-09763-x",type:"co"},
-  {t:"Neuro-Behcet's disease presenting as isolated vestibular syndrome",a:"Park E, Kim HJ, Choi JY, Kim JS, Im GJ, Yu S, Lee SU",j:"Journal of Clinical Neurology",y:2020,doi:"10.3988/jcn.2020.16.3.499",type:"co"},
-  {t:"Alternating monocular adducting saccadic pulses and dissociated adducting nystagmus in spinocerebellar ataxia type 3",a:"Lee SU, Kim HJ, Kim JS",j:"Journal of Neurology",y:2020,doi:"10.1007/s00415-019-09609-1",type:"co"},
-  {t:"Evolution in the findings of head-impulse tests during the attacks of Meniere's disease",a:"Lee SU, Kim HJ, Choi JY, Koo JW, Yang X, Kim JS",j:"Otology & Neurotology",y:2020,doi:"10.1097/MAO.0000000000002645",type:"co"},
-  {t:"Clinical Reasoning: Sudden hearing loss with vertigo in a 42-year-old woman",a:"Choi JY, Kim HJ, Kim JS",j:"Neurology",y:2020,doi:"10.1212/WNL.0000000000009591",type:"co"}
-];
-
-const KW=[
-["gentamicin-induced bilateral vestibulopathy in rabbit",["Ototoxicity","Vestibulo-ocular reflex","Gentamicin","Rabbits"]],
-["ocular vemps to head tap",["Vestibular evoked myogenic potentials","Internuclear ophthalmoplegia","Medial longitudinal fasciculus","Ocular tilt reaction","Vertigo"]],
-["isolated vestibular nuclear infarction",["Vestibulopathy","Vestibular nucleus","Lateral medullary infarction","Vertigo"]],
-["rebound upbeat nystagmus",["Gaze-evoked nystagmus","Rebound nystagmus","Lateropulsion","Episodic ataxia"]],
-["bilaterally abnormal head impulse",["Vertigo","Vestibulo-ocular reflex","Cerebellopontine-angle tumor","Head impulse test","Flocculus"]],
-["altered processing of otolithic",["Vestibular evoked myogenic potentials","Lateral medullary infarction","Subjective visual vertical","Ocular tilt reaction","Utricle","Saccule"]],
-["patterns of recurrences",["Vertigo","Benign paroxysmal positional vertigo","Treatment","Recurrence","Self-administration"]],
-["neuroprotection effects of ischemic",["Ischemic preconditioning","Ischemia","Vertigo","Medial vestibular nucleus","Rat"]],
-["etiologic distribution of dizziness",["Dizziness","Vertigo","Etiology","Age","Sex","South Korea"]],
-["update on benign paroxysmal",["Dizziness","Vertigo","Benign paroxysmal positional vertigo"]],
-["deferoxamine",["Deferoxamine","Iron-chelating agent","Ototoxicity","Rats","Dizziness","Bilateral vestibulopathy"]],
-["otoconial degeneration",["Otoconia","Ischemia","Benign paroxysmal positional vertigo","Rats"]],
-["healthcare costs",["Dizziness","Vertigo","Health care economics","Insurance","Healthcare costs","Health policy"]],
-["intellectual disability in episodic ataxia type 2: beyond",["Vertigo","Ataxia","Episodic ataxia type 2","Intellectual disability"]],
-["niigata",["Persistent postural-perceptual dizziness","Niigata PPPD questionnaire","Dizziness handicap inventory","Vestibular disorders"]]
-];
+let PUBS=[];let KW=[];
 const listEl=document.getElementById('pubList');
 const noRes=document.getElementById('noResults');
 let curFilter='all',curSearch='';
@@ -530,7 +461,7 @@ function render(){
       el.innerHTML=
         '<div class="pub-idx">'+String(idx--).padStart(2,'0')+'</div>'+
         '<div class="pub-main">'+
-          '<div class="pub-title">'+p.t+'</div>'+
+          '<div class="pub-title">'+(p.doi?'<a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener">'+p.t+'</a>':p.t)+'</div>'+
           '<div class="pub-authors">'+authorsHTML(p.a)+'</div>'+
           '<div class="pub-meta">'+
             '<span class="badge journal">'+p.j+'</span>'+
@@ -560,13 +491,32 @@ function setLang(l){
   render();
 }
 
+function updateCounts(){
+  const n=PUBS.filter(p=>p.type==='first'||p.type==='corr').length;
+  document.querySelectorAll('.cnt-fc').forEach(e=>{e.textContent=n;});
+}
+
+// Assemble email at runtime so the raw address is not in the page source
+(function(){
+  const addr=['hyojungkim.kor','gmail.com'].join('@');
+  document.querySelectorAll('.js-email').forEach(a=>{a.href='mailto:'+addr;});
+})();
+
 const io=new IntersectionObserver((entries)=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 document.getElementById('year').textContent=new Date().getFullYear();
-render();
+
+// Publication data comes from publications.js (window.PUBDATA) — works both locally and when deployed.
+// To update publications, edit publications.js only; this file never needs changing.
+(function(){
+  if(window.PUBDATA){ PUBS=window.PUBDATA.publications||[]; KW=window.PUBDATA.keywords||[]; }
+  else { listEl.innerHTML='<p style="color:var(--faint);padding:20px">publications.js not found.</p>'; }
+  updateCounts();
+  render();
+})();
 </script>
 </body>
 </html>
