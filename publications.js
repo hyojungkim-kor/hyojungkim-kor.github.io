@@ -9,7 +9,7 @@ window.PUBDATA = {
       "j": "Diagnostics",
       "y": 2026,
       "doi": "10.3390/diagnostics16131949",
-      "type": "first"
+      "type": "corr"
     },
     {
       "t": "Intellectual disability and structural defects of the CaV2.1 channel in episodic ataxia type 2: correlation using an AI prediction model",
