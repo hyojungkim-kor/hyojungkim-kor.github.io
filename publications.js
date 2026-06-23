@@ -4,6 +4,14 @@
 window.PUBDATA = {
   "publications": [
     {
+      "t": "Atlantoaxial dislocation presenting with dizziness",
+      "a": "Kim HJ, et al.",
+      "j": "Diagnostics",
+      "y": 2026,
+      "doi": "10.3390/diagnostics16131949",
+      "type": "first"
+    },
+    {
       "t": "Intellectual disability and structural defects of the CaV2.1 channel in episodic ataxia type 2: correlation using an AI prediction model",
       "a": "Kim HJ, et al.",
       "j": "Journal of Neurology",
@@ -405,6 +413,16 @@ window.PUBDATA = {
     }
   ],
   "keywords": [
+    [
+      "atlantoaxial dislocation",
+      [
+        "Atlantoaxial dislocation",
+        "Dizziness",
+        "Torticollis",
+        "Cervical instability",
+        "Bow hunter's syndrome"
+      ]
+    ],
     [
       "gentamicin-induced bilateral vestibulopathy in rabbit",
       [
